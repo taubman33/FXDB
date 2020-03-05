@@ -80,18 +80,25 @@ Timeframes are key in the development cycle. You have limited time to code and s
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
+Thurs 3/5 - present prompt, have all prep work completed
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|Jan 24th| Project Pitch / Wireframes / Priority Matrix / Functional Components | Incomplete
-|Jan 27th| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28th| Pseudocode / actual code | Incomplete
-|Jan 29th| Initial Clickable Model  | Incomplete
-|Jan 30th| MVP | Incomplete
-|Jan 31tst| Present | Incomplete
+Fri 3/6 - using completed ERD, Comp Heirarchy, create components and have all data information ready
+
+Sat 3/7 - start back end, focus on Outcomes work at night
+
+Sun 3/8 - get components started up - focus on outcomes work at night
+
+Mon - 3/9 - Complete back end 
+
+Tues - 3/10 Front end linked up, MVP reached. Night time -> focus on Outcomes for Weds meeting
+
+Weds - 3/11 styling
+
+Thurs - 3/12 attempting post MVP -> 2nd search function
+
+Fri  3/13 - present
+
 
 ## Additional Libraries
 
