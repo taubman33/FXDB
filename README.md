@@ -45,42 +45,22 @@ Based on the initial logic defined in the previous section, try to breakdown the
 
 | Component | Description |Type |
 | --- | --- | --- |
-
 | App | Sends into to index, where our search function will operate from | Class |
-
 | Layout | This will help keep everything in place during styling |  Functional |
-
 | Main | this will hold the Aside component as well as the Info Card | Class |
-
 | Header | will hold a link to go back to Home and a link to either sign up for an account or log in | Functional |
-
 | Footer | links to linked in and git repo | Functional |
-
 | Aside | contains the search bar as well as the buttons to the different effect types | Functional |
-
 | Search Bar | used to search for Pedals (MVP) and songs/guitarists (PMVP) | Class |
-
 | Effect Types | contains button links to learn about the different types of effects (dirt, modulation, pitch, time…) | Functional |
- 
-
 | Effects Subtypes | will render in the Main->InfoCard section, will display the different subtypes of effects | Functional |
-			
-
 | Info Card |  Where our main info will display, either the Pedal info, or the info about the different effect types and subtypes | Functional |
-
-
 | Log In/Register Screen | holds the components with forms to either create an account or sign in, which is necessary to C/U/D pedals | Class |
-
 | Register Form  |  allows new users to create accounts which allows them to create (+ update and delete) pedals | Class |
-
 | Login Form | returning users can log in to the site where they can now create pedals to add to the database | Class |
-
 | Create Pedal Form | for logged in users to create and add pedals into the db  | Class |
-
 | Update Pedal Form | Form for logged in users to update pedals from the db | Class |
-
 | Delete Pedal Form | Form for logged in users to delete pedals from the db | Class |
-
 
 
 ## Priority Matrix
