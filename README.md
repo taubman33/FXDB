@@ -42,8 +42,13 @@ User will be able to search for a specific effect pedal to see what gear the mus
 - multi-faceted search (pedal, song, artist)
 
 
+## ERD
+
+![ERD](https://i.imgur.com/OTnMTR7.png)
+
+
 ## React Component Hierarchy
-![Component Hierarchy](https://i.imgur.com/EKlYV8D.png)
+![Component Hierarchy](https://i.imgur.com/c7cHUY3.png)
 
 ## Components
 
