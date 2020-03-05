@@ -12,8 +12,17 @@ Paste a snippet received from a call to your API that shows the shape of the dat
 ```
 
 ## Wireframes
+HomePage
+![HomePage(https://i.imgur.com/r2XGoGz.png)
 
--> Adobe Xd file
+Effect Info -> Dirt/Distortion
+![Distortion](https://i.imgur.com/6FdgwrM.png)
+
+Pedal Info -> MXR Phase 90
+![Phase90](https://i.imgur.com/SUU9zEW.png)
+
+Adding Pedals to the DB form
+![pedal form](https://i.imgur.com/fDiuKXz.png)
 
 ### MVP
 
