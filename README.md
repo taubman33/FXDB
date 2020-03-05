@@ -13,7 +13,7 @@ Paste a snippet received from a call to your API that shows the shape of the dat
 
 ## Wireframes
 
-Display all wireframes here with any neccessary descriptions.
+-> Adobe Xd file
 
 ### MVP
 
@@ -66,8 +66,6 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 ## Timeframes
 
-Timeframes are key in the development cycle. You have limited time to code and so much to accomplish!  Look at all of your planned files and components, and all of the areas of development you are planning and give an estimate of how long each one will take to complete. It's always best to pad the time to account for the unknown, so be sure to add an additional hour or two to play it safe. As you progress, you can update the "Time Invested" column to keep track of your hours, but that number should turn into "Actual Time" by the presentation day. Also, put a winter-themed gif at the top of your readme before you pitch to show you read the instructions thoroughly.
-
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -81,7 +79,7 @@ Timeframes are key in the development cycle. You have limited time to code and s
 | Styling | H | 6hrs| X | X |
 | PMVP| H | 8hrs(full Thursday)| X | X |
 
-| Total | H | 50hrs| X | X |
+| Total | H | 55hrs| X | X |
 
 ## Project Schedule
 
@@ -90,9 +88,9 @@ Thurs 3/5 - present prompt, have all prep work completed
 
 Fri 3/6 - using completed ERD, Comp Heirarchy, create components and have all data information ready
 
-Sat 3/7 - start back end, focus on Outcomes work at night
+Sat 3/7 - start back end,
 
-Sun 3/8 - get components started up - focus on outcomes work at night
+Sun 3/8 - get components started up -> imports, exports, links + redirects
 
 Mon - 3/9 - Complete back end 
 
@@ -107,11 +105,16 @@ Fri  3/13 - present
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project. React Router Dom and Axios should be listed here at the very least.
+- React - Front end 
+- Rails - Back End
+- Axios - Getting back end data
+
 
 ## Issues and Resolutions
 
-Use this section to list of all major issues you anticipate encountering during development and how you plan to tackle them. Be sure to update this section during development, documenting the actual resolutions you inacted, as well as any other unexpected obstacles you encountered along the way.
+The main issue I am anticipating is the sheer volume of data that I'll need to put in for this to be a "completed" project. I anticipate putting in ~10-15 pedals and songs, but if I actually want to deploy this and sent it into the community for use, it will need substantially more (30-40 pedals and >50 songs).
+
+I want to have Users able to create pedals, but only Admins able to delete them (Update, not sure of yet) and so will need to learn how to set that up as well.
 
 ## Code Snippet
 
