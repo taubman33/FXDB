@@ -13,7 +13,7 @@ Paste a snippet received from a call to your API that shows the shape of the dat
 
 ## Wireframes
 HomePage
-![HomePage(https://i.imgur.com/r2XGoGz.png)
+![HomePage](https://i.imgur.com/r2XGoGz.png)
 
 Effect Info -> Dirt/Distortion
 ![Distortion](https://i.imgur.com/6FdgwrM.png)
