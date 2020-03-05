@@ -36,8 +36,7 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 
 ## React Component Hierarchy
-
-Include an image of your component hierarchy that shows the data flow and architectural design of your app.
+![Component Hierarchy](https://imgur.com/a/880XYVs)
 
 ## Components
 
@@ -65,7 +64,7 @@ Based on the initial logic defined in the previous section, try to breakdown the
 
 ## Priority Matrix
 
-Include an image of your Priority Matrix (X is time and Y is priority)
+![priority matrix](https://imgur.com/a/pvB56Rl)
 
 ## Timeframes
 
