@@ -106,6 +106,7 @@ Fri  3/13 - present
 ## Additional Libraries
 
 - React - Front end 
+- React Router - able to link and switch between the different pages
 - Rails - Back End
 - Axios - Getting back end data
 
