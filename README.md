@@ -3,9 +3,9 @@ GA SEI P4
 # Project Overview
 
 
-## Project Name
+## FXDB
 
-**Project decription:** Use this section to describe your project and what API or APIs it will utilize. List any relevant links, including the url to your live, deployed site.
+**Project decription:** A clean and easy to navigate database for musicians to find out what gear was used on specific songs, to help any cover band guitarist sound better. Songs and pedals will be searchable to see what is used where
 
 ## API Snippet
 
@@ -19,20 +19,21 @@ Display all wireframes here with any neccessary descriptions.
 
 ### MVP
 
-Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+User will be able to search for a specific effect pedal to see what gear the musicians used on it
 
 #### MVP EXAMPLE:
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
+- searchable DB of songs, effect pedals, and guitarists
+- users can log in to add their own pedals 
+- aside menu contains information about the different effects
+- clean and streamlined apperance
 
 ### Post-MVP
 
-List any additional functionality you would like to implement once MVP has been reached.
+- ability to search by pedals or songs. admin credentials for certain users to update and delete pedals from the db
 
 #### PostMVP EXAMPLE:
-- Add user auth
+- multi-faceted search (pedal, song, artist)
+
 
 ## React Component Hierarchy
 
@@ -44,8 +45,43 @@ Based on the initial logic defined in the previous section, try to breakdown the
 
 | Component | Description |Type |
 | --- | --- | --- |
-| Header | The Header receives props that render multiple nav titles and links | Functional |
-| Main | This component houses multiple rendered views through React Router and controls data received from the initial API call in state | Class |
+
+| App | Sends into to index, where our search function will operate from | Class |
+
+| Layout | This will help keep everything in place during styling |  Functional |
+
+| Main | this will hold the Aside component as well as the Info Card | Class |
+
+| Header | will hold a link to go back to Home and a link to either sign up for an account or log in | Functional |
+
+| Footer | links to linked in and git repo | Functional |
+
+| Aside | contains the search bar as well as the buttons to the different effect types | Functional |
+
+| Search Bar | used to search for Pedals (MVP) and songs/guitarists (PMVP) | Class |
+
+| Effect Types | contains button links to learn about the different types of effects (dirt, modulation, pitch, time…) | Functional |
+ 
+
+| Effects Subtypes | will render in the Main->InfoCard section, will display the different subtypes of effects | Functional |
+			
+
+| Info Card |  Where our main info will display, either the Pedal info, or the info about the different effect types and subtypes | Functional |
+
+
+| Log In/Register Screen | holds the components with forms to either create an account or sign in, which is necessary to C/U/D pedals | Class |
+
+| Register Form  |  allows new users to create accounts which allows them to create (+ update and delete) pedals | Class |
+
+| Login Form | returning users can log in to the site where they can now create pedals to add to the database | Class |
+
+| Create Pedal Form | for logged in users to create and add pedals into the db  | Class |
+
+| Update Pedal Form | Form for logged in users to update pedals from the db | Class |
+
+| Delete Pedal Form | Form for logged in users to delete pedals from the db | Class |
+
+
 
 ## Priority Matrix
 
