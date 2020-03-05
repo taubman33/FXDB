@@ -36,7 +36,7 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 
 ## React Component Hierarchy
-![Component Hierarchy](https://imgur.com/a/880XYVs)
+![Component Hierarchy](https://i.imgur.com/EKlYV8D.png)
 
 ## Components
 
@@ -64,7 +64,7 @@ Based on the initial logic defined in the previous section, try to breakdown the
 
 ## Priority Matrix
 
-![priority matrix](https://imgur.com/a/pvB56Rl)
+![priority matrix](https://i.imgur.com/l4P1AZv.png)
 
 ## Timeframes
 
