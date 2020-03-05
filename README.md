@@ -110,6 +110,26 @@ Fri  3/13 - present
 - Rails - Back End
 - Axios - Getting back end data
 
+## Routes
+
+  GET
+ - /api - Home screen
+ - /api/_effect_ - gives the route for the Effect type link clicked on (Dirt, Mod, Pitch 
+ - /api/_effect_/_sub_effect_ - gives the route for the effect subtype (api/dirt/fuzz or api/mod/phaser)
+ - /api/pedals/:id - gives the route for the searched-for pedal (api/pedals/tubescreamer or api/pedals/carboncopy
+ 
+ -/api/login - Login screen, where users can log in, or create an account 
+ 
+ POST
+ - /api/createpedal - Where users can post up pedals into the db
+
+ UPDATE / DELETE
+ 
+ -/api/editpedal - will have forms to edit, or delete a pedal in the db
+ 
+ 
+
+
 
 ## Issues and Resolutions
 
