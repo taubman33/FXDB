@@ -38,7 +38,7 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 ## Components
 
-Based on the initial logic defined in the previous section, try to breakdown the logic further into stateless/stateful components. 
+
 
 | Component | Description |Type |
 | --- | --- | --- |
@@ -71,17 +71,17 @@ Timeframes are key in the development cycle. You have limited time to code and s
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Creating Rails Backend | H | 3hrs| X | X |
-| Setting up data | H | 3hrs| X | X |
-| Setting up React components| H | 3hrs| X | X |
-| Components linked together | H | 3hrs| X | X |
-| Info rendering correctly | H | 3hrs| X | X |
-| Getting Auth Set Up | H | 3hrs| X | X |
-| CRUD functionality | H | 3hrs| X | X |
-| Styling | H | 3hrs| X | X |
-| PMVP| H | 3hrs| X | X |
+| Creating Rails Backend | H | 6hrs| X | X |
+| Setting up data | H | 4hrs| X | X |
+| Setting up React components| H | 5hrs| X | X |
+| Components linked together | H | 6hrs| X | X |
+| Info rendering correctly | H | 6hrs| X | X |
+| Getting Auth Set Up | H |7hrs| X | X |
+| CRUD functionality | H | 6hrs| X | X |
+| Styling | H | 6hrs| X | X |
+| PMVP| H | 8hrs(full Thursday)| X | X |
 
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 50hrs| X | X |
 
 ## Project Schedule
 
