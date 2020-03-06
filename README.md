@@ -57,10 +57,17 @@ User will be able to search for a specific effect pedal to see what gear the mus
 	- Index route showing all searched pedals. 
 - GET `/pedals/:id`
 	- Show route for a pedal by ID
+- GET `/songs`
+	- Index route showing all searched songs to see what effects are used in them. 
+- GET `/songs/:id`
+	- Show route for a song by ID
 - POST `/addpedal`
 	- Create route for user to add pedal to the db
-- PUT `/users/:id/nominate`
-  - Update a user by id to create an association to the ballots table
+- PUT `/pedals/editpedal`
+        - Update a user to update the information of a pedal they have created and posted to the db
+- DELETE `/pedals/editpedal`
+       - Allows a user to delete a pedal that they have created in the db
+  
 
 <br>
 
