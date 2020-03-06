@@ -47,7 +47,7 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/OTnMTR7.png)
+![ERD](https://i.imgur.com/19cLJG9.png)
 
 #### Endpoints
 
