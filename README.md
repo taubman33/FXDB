@@ -42,9 +42,29 @@ User will be able to search for a specific effect pedal to see what gear the mus
 - multi-faceted search (pedal, song, artist)
 
 
-## ERD
+
+### MVP Server (Back End)
+
+#### ERD Model
 
 ![ERD](https://i.imgur.com/OTnMTR7.png)
+
+#### Endpoints
+
+> Use this section to list a selection of your intended endpoints and their uses. Please list any and all custom-created endpoints.
+
+- GET `/pedals`
+	- Index route showing all searched pedals. 
+- GET `/pedals/:id`
+	- Show route for a pedal by ID
+- POST `/addpedal`
+	- Create route for user to add pedal to the db
+- PUT `/users/:id/nominate`
+  - Update a user by id to create an association to the ballots table
+
+<br>
+
+***
 
 
 ## React Component Hierarchy
