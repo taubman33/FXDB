@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize_request, except: :create
    def user_params
     params.require(:user).permit( :username, :email, :password )
    end
