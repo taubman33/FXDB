@@ -17,4 +17,4 @@ class PedalsController < ApplicationController
       end
     
     end
-end
+

@@ -295,3 +295,69 @@ FOREIGN KEY ("user_id")
   [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Time"], ["artist", "Pink Floyd"], ["guitarist", "David Gilmour"], ["pedals_used", "Dallas Arbiter Fuzz Face"], ["created_at", "2020-03-09 16:20:14.551504"], ["updated_at", "2020-03-09 16:20:14.551504"]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
+Started GET "/" for ::1 at 2020-03-09 12:28:06 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jeremytaubman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jeremytaubman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.0ms | Allocations: 482)
+Completed 200 OK in 41ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 2715)
+
+
+Started GET "/users/" for ::1 at 2020-03-09 12:28:09 -0400
+  
+SyntaxError (/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/" for ::1 at 2020-03-09 12:28:32 -0400
+  
+SyntaxError (/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:19: syntax error, unexpected end, expecting end-of-input
+Started GET "/favicon.ico" for ::1 at 2020-03-09 12:28:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2020-03-09 12:28:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 12.0ms | ActiveRecord: 33.5ms | Allocations: 7439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-09 12:28:47 -0400
+  
+SyntaxError (/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/pedals_controller.rb:20: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/pedals_controller.rb:20: syntax error, unexpected end, expecting end-of-input
+app/controllers/pedals_controller.rb:20: syntax error, unexpected end, expecting end-of-input
+Started GET "/pedals" for ::1 at 2020-03-09 12:28:54 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 6.7ms | Allocations: 10335)
+
+
