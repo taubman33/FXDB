@@ -6,7 +6,6 @@ class CreateSongs < ActiveRecord::Migration[6.0]
       t.string :guitarist
       t.string :pedals_used
       t.pedal :references
-      t.pedal :references
 
       t.timestamps
     end
