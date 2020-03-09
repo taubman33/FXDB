@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_160143) do
+ActiveRecord::Schema.define(version: 2020_03_09_160159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 2020_03_09_160143) do
     t.string "notable_users"
     t.string "songs_used_on"
     t.string "photo"
+    t.bigint "user_id", null: false
+    t.bigint "song_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_id"], name: "index_pedals_on_song_id"
+    t.index ["user_id"], name: "index_pedals_on_user_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -45,4 +49,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_160143) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "pedals", "songs"
+  add_foreign_key "pedals", "users"
 end

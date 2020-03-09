@@ -11,14 +11,15 @@ User.create!(username: 'Basega Tarest', email: 'email1@email.com', password_dige
 User.create!(username: 'Thad Rummer', email: 'email2@email.com', password_digest: 'password', active: false)
 puts "#{User.count} users created!"
 
-
-
-
-Pedal.create!(name:'Big Muff', maker:'Electro Harmonix', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Dan Auerbach (The Black Keys)', songs_used_on: 'The Black Keys - Thickfreakness', photo:'https://i.imgur.com/BTIbW6M.jpg')                                                                                                                                 
-Pedal.create!(name:'Tube Screamer', maker:'Ibanez', effect_type:'dirt', effect_subtype:'overdrive', notable_users:'Eric Johnson', songs_used_on:'Stevie Ray Vaughn - Pride and Joy', photo: 'https://i.imgur.com/2UfzxG2.jpg')
-Pedal.create!(name:'Centaur', maker:'Klon', effect_type:'dirt', effect_subtype:'overdrive', notable_users:'John Mayer', songs_used_on: 'John Mayer - Slow Dancing In a Room on Fire', photo:'https://i.imgur.com/j4fwi0D.jpg')
-Pedal.create!(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
-
+@user = User.create!(username: 'Git Tarest', email: 'email@email.com', password_digest: 'password', active: true)
+@pedal1 = @user.pedals.build(name:'Big Muff', maker:'Electro Harmonix', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Dan Auerbach (The Black Keys)', songs_used_on: 'The Black Keys - Thickfreakness', photo:'https://i.imgur.com/BTIbW6M.jpg')                                                                                                                                 
+@pedal1.save                                                                                                                              
+@pedal2 = @user.pedals.build(name:'Tube Screamer', maker:'Ibanez', effect_type:'dirt', effect_subtype:'overdrive', notable_users:'Eric Johnson', songs_used_on:'Stevie Ray Vaughn - Pride and Joy', photo: 'https://i.imgur.com/2UfzxG2.jpg')
+@pedal2.save
+@pedal3 = @user.pedals.build(name:'Centaur', maker:'Klon', effect_type:'dirt', effect_subtype:'overdrive', notable_users:'John Mayer', songs_used_on: 'John Mayer - Slow Dancing In a Room on Fire', photo:'https://i.imgur.com/j4fwi0D.jpg')
+@pedal3.save
+@pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4.save
 puts "#{Pedal.count} pedals created!"
 
 

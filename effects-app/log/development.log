@@ -59,3 +59,239 @@ Migrating to CreateSongs (20200309160143)
   [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Time"], ["artist", "Pink Floyd"], ["guitarist", "David Gilmour"], ["pedals_used", "Dallas Arbiter Fuzz Face"], ["created_at", "2020-03-09 16:03:38.487138"], ["updated_at", "2020-03-09 16:03:38.487138"]]
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (180.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "effects_app_development"[0m
+  [1m[35m (96.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "effects_app_test"[0m
+  [1m[35m (446.3ms)[0m  [1m[35mCREATE DATABASE "effects_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (184.8ms)[0m  [1m[35mCREATE DATABASE "effects_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4219991261912683005)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200309160119)
+  [1m[35m (22.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "active" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200309160119"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePedals (20200309160129)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (38.5ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "maker" character varying, "effect_type" character varying, "effect_subtype" character varying, "notable_users" character varying, "songs_used_on" character varying, "photo" character varying, "user_id" bigint NOT NULL, "song_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_66625f0441"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_77fa4bd98f"
+FOREIGN KEY ("song_id")
+  REFERENCES "songs" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4219991261912683005)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4219991261912683005)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSongs (20200309160143)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "name" character varying, "artist" character varying, "guitarist" character varying, "pedals_used" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200309160143"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePedals (20200309160159)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "maker" character varying, "effect_type" character varying, "effect_subtype" character varying, "notable_users" character varying, "songs_used_on" character varying, "photo" character varying, "user_id" bigint NOT NULL, "song_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_66625f0441"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_77fa4bd98f"
+FOREIGN KEY ("song_id")
+  REFERENCES "songs" ("id")
+)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_user_id" ON "pedals"  ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_song_id" ON "pedals"  ("song_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200309160159"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-09 16:13:03.832096"], ["updated_at", "2020-03-09 16:13:03.832096"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4219991261912683005)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (24.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:15:42.994030"], ["updated_at", "2020-03-09 16:15:42.994030"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Basega Tarest"], ["email", "email1@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:15:43.025155"], ["updated_at", "2020-03-09 16:15:43.025155"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Thad Rummer"], ["email", "email2@email.com"], ["password_digest", "password"], ["active", false], ["created_at", "2020-03-09 16:15:43.029494"], ["updated_at", "2020-03-09 16:15:43.029494"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:15:43.038035"], ["updated_at", "2020-03-09 16:15:43.038035"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:16:24.338956"], ["updated_at", "2020-03-09 16:16:24.338956"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (24.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Basega Tarest"], ["email", "email1@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:16:24.344329"], ["updated_at", "2020-03-09 16:16:24.344329"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Thad Rummer"], ["email", "email2@email.com"], ["password_digest", "password"], ["active", false], ["created_at", "2020-03-09 16:16:24.372922"], ["updated_at", "2020-03-09 16:16:24.372922"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:16:24.378326"], ["updated_at", "2020-03-09 16:16:24.378326"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (4.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 8], ["created_at", "2020-03-09 16:16:24.465368"], ["updated_at", "2020-03-09 16:16:24.465368"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 8], ["created_at", "2020-03-09 16:16:24.478217"], ["updated_at", "2020-03-09 16:16:24.478217"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 8], ["created_at", "2020-03-09 16:16:24.482099"], ["updated_at", "2020-03-09 16:16:24.482099"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 8], ["created_at", "2020-03-09 16:16:24.486682"], ["updated_at", "2020-03-09 16:16:24.486682"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 8], ["created_at", "2020-03-09 16:16:24.490628"], ["updated_at", "2020-03-09 16:16:24.490628"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Satisfaction"], ["artist", "The Rolling Stones"], ["guitarist", "Keith Richards"], ["pedals_used", "Maestro - Fuzz Tone"], ["created_at", "2020-03-09 16:16:24.527632"], ["updated_at", "2020-03-09 16:16:24.527632"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Seven Nation Army"], ["artist", "The White Stripes"], ["guitarist", "Jack White"], ["pedals_used", "Electro Harmonix Big Muff"], ["created_at", "2020-03-09 16:16:24.531704"], ["updated_at", "2020-03-09 16:16:24.531704"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Time"], ["artist", "Pink Floyd"], ["guitarist", "David Gilmour"], ["pedals_used", "Dallas Arbiter Fuzz Face"], ["created_at", "2020-03-09 16:16:24.535503"], ["updated_at", "2020-03-09 16:16:24.535503"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPedal Load (23.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 11]]
+  [1m[36mPedal Load (0.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPedal Load (7.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (350.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "effects_app_development"[0m
+  [1m[35m (188.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "effects_app_test"[0m
+  [1m[35m (243.3ms)[0m  [1m[35mCREATE DATABASE "effects_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (203.7ms)[0m  [1m[35mCREATE DATABASE "effects_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedals" CASCADE[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "maker" character varying, "effect_type" character varying, "effect_subtype" character varying, "notable_users" character varying, "songs_used_on" character varying, "photo" character varying, "user_id" bigint NOT NULL, "song_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_song_id" ON "pedals"  ("song_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_user_id" ON "pedals"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "songs" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "name" character varying, "artist" character varying, "guitarist" character varying, "pedals_used" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "active" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "pedals" ADD CONSTRAINT "fk_rails_77fa4bd98f"
+FOREIGN KEY ("song_id")
+  REFERENCES "songs" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "pedals" ADD CONSTRAINT "fk_rails_66625f0441"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200309160159)[0m
+  [1m[35m (28.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200309160119),
+(20200309160143);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-09 16:20:13.786808"], ["updated_at", "2020-03-09 16:20:13.786808"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (24.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a64d25909e70c4fd4986b9f528c292cbacb233a7"], ["created_at", "2020-03-09 16:20:13.800631"], ["updated_at", "2020-03-09 16:20:13.800631"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedals" CASCADE[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "maker" character varying, "effect_type" character varying, "effect_subtype" character varying, "notable_users" character varying, "songs_used_on" character varying, "photo" character varying, "user_id" bigint NOT NULL, "song_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_song_id" ON "pedals"  ("song_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_pedals_on_user_id" ON "pedals"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "songs" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "name" character varying, "artist" character varying, "guitarist" character varying, "pedals_used" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "active" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (28.8ms)[0m  [1m[35mALTER TABLE "pedals" ADD CONSTRAINT "fk_rails_77fa4bd98f"
+FOREIGN KEY ("song_id")
+  REFERENCES "songs" ("id")
+[0m
+  [1m[35m (13.1ms)[0m  [1m[35mALTER TABLE "pedals" ADD CONSTRAINT "fk_rails_66625f0441"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200309160159)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200309160119),
+(20200309160143);
+
+[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (25.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-09 16:20:14.078687"], ["updated_at", "2020-03-09 16:20:14.078687"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (4.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-03-09 16:20:14.087072"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (24.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a64d25909e70c4fd4986b9f528c292cbacb233a7"], ["created_at", "2020-03-09 16:20:14.099690"], ["updated_at", "2020-03-09 16:20:14.099690"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:20:14.301505"], ["updated_at", "2020-03-09 16:20:14.301505"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Basega Tarest"], ["email", "email1@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:20:14.333875"], ["updated_at", "2020-03-09 16:20:14.333875"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Thad Rummer"], ["email", "email2@email.com"], ["password_digest", "password"], ["active", false], ["created_at", "2020-03-09 16:20:14.340686"], ["updated_at", "2020-03-09 16:20:14.340686"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (25.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Git Tarest"], ["email", "email@email.com"], ["password_digest", "password"], ["active", true], ["created_at", "2020-03-09 16:20:14.351657"], ["updated_at", "2020-03-09 16:20:14.351657"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (1.9ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Big Muff"], ["maker", "Electro Harmonix"], ["effect_type", "dirt"], ["effect_subtype", "fuzz"], ["notable_users", "Dan Auerbach (The Black Keys)"], ["songs_used_on", "The Black Keys - Thickfreakness"], ["photo", "https://i.imgur.com/BTIbW6M.jpg"], ["user_id", 4], ["created_at", "2020-03-09 16:20:14.413510"], ["updated_at", "2020-03-09 16:20:14.413510"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.6ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Tube Screamer"], ["maker", "Ibanez"], ["effect_type", "dirt"], ["effect_subtype", "overdrive"], ["notable_users", "Eric Johnson"], ["songs_used_on", "Stevie Ray Vaughn - Pride and Joy"], ["photo", "https://i.imgur.com/2UfzxG2.jpg"], ["user_id", 4], ["created_at", "2020-03-09 16:20:14.435164"], ["updated_at", "2020-03-09 16:20:14.435164"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (1.2ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Centaur"], ["maker", "Klon"], ["effect_type", "dirt"], ["effect_subtype", "overdrive"], ["notable_users", "John Mayer"], ["songs_used_on", "John Mayer - Slow Dancing In a Room on Fire"], ["photo", "https://i.imgur.com/j4fwi0D.jpg"], ["user_id", 4], ["created_at", "2020-03-09 16:20:14.442349"], ["updated_at", "2020-03-09 16:20:14.442349"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (24.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_type", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Rat"], ["maker", "ProCo"], ["effect_type", "dirt"], ["effect_subtype", "distortion"], ["notable_users", "Jeff Beck"], ["songs_used_on", "none"], ["photo", "https://i.imgur.com/3g17Rrl.jpg"], ["user_id", 4], ["created_at", "2020-03-09 16:20:14.450349"], ["updated_at", "2020-03-09 16:20:14.450349"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pedals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.9ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Satisfaction"], ["artist", "The Rolling Stones"], ["guitarist", "Keith Richards"], ["pedals_used", "Maestro - Fuzz Tone"], ["created_at", "2020-03-09 16:20:14.497033"], ["updated_at", "2020-03-09 16:20:14.497033"]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Seven Nation Army"], ["artist", "The White Stripes"], ["guitarist", "Jack White"], ["pedals_used", "Electro Harmonix Big Muff"], ["created_at", "2020-03-09 16:20:14.528848"], ["updated_at", "2020-03-09 16:20:14.528848"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("name", "artist", "guitarist", "pedals_used", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Time"], ["artist", "Pink Floyd"], ["guitarist", "David Gilmour"], ["pedals_used", "Dallas Arbiter Fuzz Face"], ["created_at", "2020-03-09 16:20:14.551504"], ["updated_at", "2020-03-09 16:20:14.551504"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
