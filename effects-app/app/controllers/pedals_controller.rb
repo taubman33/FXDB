@@ -54,5 +54,3 @@ class PedalsController < ApplicationController
           params.require(:pedal).permit(:username, :email, :password)
         end
     end
-
-  end

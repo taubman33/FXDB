@@ -361,3 +361,37 @@ Processing by PedalsController#index as HTML
 Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 6.7ms | Allocations: 10335)
 
 
+Started GET "/pedals" for ::1 at 2020-03-09 14:10:16 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/pedals_controller.rb:58: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/controllers/pedals_controller.rb:58: syntax error, unexpected end, expecting end-of-input
+app/controllers/pedals_controller.rb:58: syntax error, unexpected end, expecting end-of-input
+Started GET "/pedals" for ::1 at 2020-03-09 14:10:48 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (15.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:6:in `index'
+Completed 200 OK in 58ms (Views: 32.2ms | ActiveRecord: 20.6ms | Allocations: 10828)
+
+
+Started GET "/pedals/" for ::1 at 2020-03-09 14:11:23 -0400
+Processing by PedalsController#index as */*
+  Parameters: {"name"=>"New New New Dommmmm edited", "photo"=>"google.com", "pedal"=>{"name"=>"New New New Dommmmm edited", "photo"=>"google.com"}}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1746)
+
+
+Started GET "/pedals/2" for ::1 at 2020-03-09 14:11:28 -0400
+Processing by PedalsController#show as */*
+  Parameters: {"name"=>"New New New Dommmmm edited", "photo"=>"google.com", "id"=>"2", "pedal"=>{"name"=>"New New New Dommmmm edited", "photo"=>"google.com"}}
+  [1m[36mPedal Load (1.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:49:in `set_pedal'
+  [1m[36mCACHE Pedal Load (0.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:11:in `show'
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 2917)
+
+
