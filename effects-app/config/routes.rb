@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 resources :users
 resources :pedals do 
   collection do
-    get 
+    get :search
+  end
+end 
 
+  get 'search/:pedal_name', to: "pedals#search"
 end
+
