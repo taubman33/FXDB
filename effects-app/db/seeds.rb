@@ -30,6 +30,9 @@ puts "#{User.count} users created!"
 @pedal8.save
 @pedal9 = @user.pedals.build(name:'CryBaby', maker:'Dunlop', effect_type:'pitch', effect_subtype:'wah', notable_users:'Slash',  songs_used_on:'Guns N Roses - Paradise City', photo: 'https://i.imgur.com/4cwbJSQ.jpg')
 @pedal9.save
+@pedal10 = @user.pedals.build(name:'Fuzz Face', maker:'Dallas-Arbiter', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Jimi Hendrix',  songs_used_on:'Jimi Hendrix - All Along the Watchtower', photo: 'https://i.imgur.com/Cr3cghz.jpg')
+@pedal10.save
+
 puts "#{Pedal.count} pedals created!"
 
 
