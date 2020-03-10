@@ -486,6 +486,7 @@ Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 2.4ms | Allocations: 1453
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/search/centaur" for ::1 at 2020-03-09 17:12:13 -0400
 Processing by PedalsController#search as HTML
   Parameters: {"pedal_name"=>"centaur"}
@@ -829,5 +830,7 @@ Processing by PedalsController#search as HTML
 Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 1172)
 
 
+=======
+>>>>>>> parent of 55cfbec... tuesday morning
 =======
 >>>>>>> parent of 55cfbec... tuesday morning
