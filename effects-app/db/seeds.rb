@@ -28,6 +28,7 @@ Song.create!(name:'Satisfaction', artist:'The Rolling Stones', guitarist:'Keith 
 Song.create!(name:'Seven Nation Army', artist:'The White Stripes', guitarist:'Jack White', pedals_used:'Electro Harmonix Big Muff')
 Song.create!(name:'Time', artist:'Pink Floyd', guitarist:'David Gilmour', pedals_used:'Dallas Arbiter Fuzz Face')
 
+<<<<<<< HEAD
 puts "#{Song.count} songs created!"
 
 @pedal4 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on:'none', photo: 'https://i.imgur.com/USipfLC.jpg')
@@ -38,3 +39,6 @@ puts "#{Song.count} songs created!"
 @pedal4.save
 @pedal4 = @user.pedals.build(name:'Blue Box', maker:'MXR', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Gary Clark Jr.',  songs_used_on:'Gary Clark Jr. - Bright Lights Big City', photo: 'https://i.imgur.com/e3IOg2S.jpg')
 @pedal4.save
+=======
+puts "#{Song.count} songs created!"
+>>>>>>> parent of 55cfbec... tuesday morning
