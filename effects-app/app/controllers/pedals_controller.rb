@@ -1,9 +1,9 @@
 class PedalsController < ApplicationController
-  before_action :authorize_request, except: %i[index show]
+  before_action :authorize_request, except: %i[index show search]
   before_action :set_pedal, only: [:show, :update, :destroy]
 
   def search
-    @pedals = Pedal.all.where(name: params[ :pedal_name])
+    @pedals = Pedal.where(name: params[ :pedal_name])
     render json: { message: "ok", pedals: @pedals }
   end
 

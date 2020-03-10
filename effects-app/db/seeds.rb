@@ -29,3 +29,12 @@ Song.create!(name:'Seven Nation Army', artist:'The White Stripes', guitarist:'Ja
 Song.create!(name:'Time', artist:'Pink Floyd', guitarist:'David Gilmour', pedals_used:'Dallas Arbiter Fuzz Face')
 
 puts "#{Song.count} songs created!"
+
+@pedal4 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4.save
+@pedal4 = @user.pedals.build(name:'Micro Flanger', maker:'MXR', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4.save
+@pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4.save
+@pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4.save
