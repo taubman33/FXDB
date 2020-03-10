@@ -1,5 +1,5 @@
 class PedalsController < ApplicationController
-  before_action :authorize_request, except: %i[index show]
+  before_action :authorize_request, except: %i[index show search]
   before_action :set_pedal, only: [:show, :update, :destroy]
 
   def search

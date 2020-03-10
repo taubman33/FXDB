@@ -20,6 +20,16 @@ puts "#{User.count} users created!"
 @pedal3.save
 @pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
 @pedal4.save
+@pedal5 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on: 'Van Halen - Eruption', photo: 'https://i.imgur.com/USipfLC.jpg')
+@pedal5.save
+@pedal6 = @user.pedals.build(name:'Micro Flanger', maker:'MXR', effect_type:'modulation', effect_subtype:'flanger', notable_users:'Eddie Van Halen',  songs_used_on:'Heart - Barracuda', photo: 'https://i.imgur.com/qwrcN15.jpg')
+@pedal6.save
+@pedal7 = @user.pedals.build(name:'Carbon Copy', maker:'MXR', effect_type:'time', effect_subtype:'delay', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/914Slaf.jpg')
+@pedal7.save
+@pedal8 = @user.pedals.build(name:'Blue Box', maker:'MXR', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Gary Clark Jr.',  songs_used_on:'Gary Clark Jr. - Bright Lights Big City', photo: 'https://i.imgur.com/e3IOg2S.jpg')
+@pedal8.save
+@pedal9 = @user.pedals.build(name:'CryBaby', maker:'Dunlop', effect_type:'pitch', effect_subtype:'wah', notable_users:'Slash',  songs_used_on:'Guns N Roses - Paradise City', photo: 'https://i.imgur.com/4cwbJSQ.jpg')
+@pedal9.save
 puts "#{Pedal.count} pedals created!"
 
 
@@ -32,14 +42,10 @@ Song.create!(name:'Time', artist:'Pink Floyd', guitarist:'David Gilmour', pedals
 <<<<<<< HEAD
 puts "#{Song.count} songs created!"
 
-@pedal4 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on:'none', photo: 'https://i.imgur.com/USipfLC.jpg')
-@pedal4.save
-@pedal4 = @user.pedals.build(name:'Micro Flanger', maker:'MXR', effect_type:'modulation', effect_subtype:'flanger', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
-@pedal4.save
-@pedal4 = @user.pedals.build(name:'Carbon Copy', maker:'MXR', effect_type:'time', effect_subtype:'delay', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/914Slaf.jpg')
-@pedal4.save
-@pedal4 = @user.pedals.build(name:'Blue Box', maker:'MXR', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Gary Clark Jr.',  songs_used_on:'Gary Clark Jr. - Bright Lights Big City', photo: 'https://i.imgur.com/e3IOg2S.jpg')
-@pedal4.save
+
+
+
+
 =======
 puts "#{Song.count} songs created!"
 >>>>>>> parent of 55cfbec... tuesday morning
