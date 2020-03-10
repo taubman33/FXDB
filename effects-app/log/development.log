@@ -772,3 +772,59 @@ Processing by PedalsController#search as HTML
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1172)
 
 
+Started GET "/search/Centaur" for ::1 at 2020-03-10 10:26:10 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 1263)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-10 10:26:10 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1172)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-10 10:31:18 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (1.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 20ms (Views: 11.5ms | ActiveRecord: 1.2ms | Allocations: 1172)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-10 10:31:19 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1172)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-10 10:31:19 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1172)
+
+
+Started GET "/search/Centa" for ::1 at 2020-03-10 11:46:46 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centa"}
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centa"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 0.9ms | Allocations: 1056)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-10 11:46:53 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 1172)
+
+

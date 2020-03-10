@@ -30,11 +30,11 @@ Song.create!(name:'Time', artist:'Pink Floyd', guitarist:'David Gilmour', pedals
 
 puts "#{Song.count} songs created!"
 
-@pedal4 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4 = @user.pedals.build(name:'Phase 90', maker:'MXR', effect_type:'modulation', effect_subtype:'phaser', notable_users:'Eddie Van Halen',  songs_used_on:'none', photo: 'https://i.imgur.com/USipfLC.jpg')
 @pedal4.save
-@pedal4 = @user.pedals.build(name:'Micro Flanger', maker:'MXR', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4 = @user.pedals.build(name:'Micro Flanger', maker:'MXR', effect_type:'modulation', effect_subtype:'flanger', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
 @pedal4.save
-@pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4 = @user.pedals.build(name:'Carbon Copy', maker:'MXR', effect_type:'time', effect_subtype:'delay', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/914Slaf.jpg')
 @pedal4.save
-@pedal4 = @user.pedals.build(name:'Rat', maker:'ProCo', effect_type:'dirt', effect_subtype:'distortion', notable_users:'Jeff Beck',  songs_used_on:'none', photo: 'https://i.imgur.com/3g17Rrl.jpg')
+@pedal4 = @user.pedals.build(name:'Blue Box', maker:'MXR', effect_type:'dirt', effect_subtype:'fuzz', notable_users:'Gary Clark Jr.',  songs_used_on:'Gary Clark Jr. - Bright Lights Big City', photo: 'https://i.imgur.com/e3IOg2S.jpg')
 @pedal4.save
