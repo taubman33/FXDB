@@ -26,7 +26,7 @@ class PedalsController < ApplicationController
   
       # POST /pedals
       def create
-        @pedal = Pedal.new(pedal_params)
+        @post = @current_user.pedals.build(pedal_params)
     
         if @pedal.save
           render json: @pedal, status: :created, location: @pedal
