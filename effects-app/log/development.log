@@ -7618,3 +7618,575 @@ Processing by PedalsController#index as HTML
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 2764)
 
 
+Started GET "/pedals" for ::1 at 2020-03-11 15:46:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:46:21 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 981)
+
+
+  [1m[36mPedal Load (2.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 2.0ms | Allocations: 3721)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:48:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:48:53 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.9ms | Allocations: 2965)
+
+
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 3760)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:51:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:51:46 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2764)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 857)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:51:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:51:52 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (16.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 22ms (Views: 5.2ms | ActiveRecord: 16.2ms | Allocations: 3248)
+
+
+  [1m[36mUser Load (20.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 20.3ms | Allocations: 3760)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:52:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:52:27 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (1.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.5ms | Allocations: 3248)
+
+
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 10.2ms | Allocations: 3760)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:53:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:53:09 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (6.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 6.9ms | Allocations: 3248)
+
+
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 13.2ms | Allocations: 3760)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 15:53:43 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"knn", "maker"=>"rvr", "effect_type"=>"", "effect_subtype"=>"noh", "notable_users"=>"bbk", "songs_used_on"=>"knkn", "photo"=>"lkbkb", "pedal"=>{"name"=>"knn", "maker"=>"rvr", "effect_type"=>"", "effect_subtype"=>"noh", "notable_users"=>"bbk", "songs_used_on"=>"knkn", "photo"=>"lkbkb"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started POST "/users/" for ::1 at 2020-03-11 15:54:35 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"eroll", "email"=>"eroll@col.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eroll"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eroll@col.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "eroll"], ["email", "eroll@col.com"], ["password_digest", "$2a$12$3Cs2xBg04IeXrpjd32gtXOGOyKmGp0wqUDhzsND3IBy8nhBdfOqW6"], ["created_at", "2020-03-11 19:54:36.073395"], ["updated_at", "2020-03-11 19:54:36.073395"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+Completed 200 OK in 235ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 4700)
+
+
+Started POST "/auth/login" for ::1 at 2020-03-11 15:55:46 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"eroll", "email"=>"eroll@col.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"eroll", "email"=>"eroll@col.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eroll"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `login'
+Completed 200 OK in 227ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1110)
+
+
+Started POST "/auth/login" for ::1 at 2020-03-11 15:55:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"eroll", "email"=>"eroll@col.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"eroll", "email"=>"eroll@col.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eroll"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `login'
+Completed 200 OK in 230ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 950)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 15:56:20 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"fjb4", "maker"=>"4inf4", "effect_type"=>"", "effect_subtype"=>"4nfi4n", "notable_users"=>"fib4i4", "songs_used_on"=>"nonfo", "photo"=>"vufubi4", "pedal"=>{"name"=>"fjb4", "maker"=>"4inf4", "effect_type"=>"", "effect_subtype"=>"4nfi4n", "notable_users"=>"fib4i4", "songs_used_on"=>"nonfo", "photo"=>"vufubi4"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started POST "/pedals" for ::1 at 2020-03-11 15:57:29 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}"=>nil}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started POST "/pedals" for ::1 at 2020-03-11 15:58:26 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 20ms (ActiveRecord: 0.3ms | Allocations: 3083)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:29:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 15:59:05 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedals\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}\n}"=>nil}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 7ms (ActiveRecord: 3.2ms | Allocations: 785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:29:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 15:59:12 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedal\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}\n}"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms | Allocations: 785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:29:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:01:03 -0400
+  
+SyntaxError (/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting ')'
+...name, :maker, :effect_subtype :notable_users :songs_used_on ...
+...                              ^
+/Users/jeremytaubman/Desktop/SEI-Blizzard/p4/FXDB/effects-app/app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting end
+...:notable_users :songs_used_on :photo)
+...                              ^):
+  
+app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting ')'
+app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting end
+app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting ')'
+app/controllers/pedals_controller.rb:60: syntax error, unexpected ':', expecting end
+Started POST "/pedals" for ::1 at 2020-03-11 16:01:33 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedal\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}\n}"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 98ms (ActiveRecord: 26.8ms | Allocations: 7085)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:29:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:03:53 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedal\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\t\n}\n}"=>nil}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 47ms (ActiveRecord: 12.4ms | Allocations: 6877)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:30:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:04:10 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n\n}"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms | Allocations: 769)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:30:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:04:25 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedals\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n}\n}"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms | Allocations: 769)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:30:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:04:30 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"{\"pedal\":\n{\n\t\"name\": \"Canyon\",\n\t\"maker\": \"EHX\",\n\t\"effect_type\": \"time\",\n\t\"effect_subtype\": \"delay\",\n\t\"notable_users\": \"me\",\n\t\"songs_featured_on\": \"none\",\n\t\"photo\":\"none\"\n}\n}"=>nil}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.6ms | Allocations: 769)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: pedal):
+  
+app/controllers/pedals_controller.rb:60:in `pedal_params'
+app/controllers/pedals_controller.rb:30:in `create'
+Started POST "/pedals" for ::1 at 2020-03-11 16:05:50 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"pedal"=>{"name"=>"Canyon", "maker"=>"EHX", "effect_type"=>"time", "effect_subtype"=>"delay", "notable_users"=>"me", "songs_featured_on"=>"none", "photo"=>"none"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameters: :effect_type, :songs_featured_on[0m
+Completed 422 Unprocessable Entity in 50ms (Views: 0.3ms | ActiveRecord: 6.0ms | Allocations: 10329)
+
+
+Started POST "/pedals" for ::1 at 2020-03-11 16:06:24 -0400
+Processing by PedalsController#create as */*
+  Parameters: {"pedal"=>{"name"=>"Canyon", "maker"=>"EHX", "effect_type"=>"time", "effect_subtype"=>"delay", "notable_users"=>"me", "songs_featured_on"=>"none", "photo"=>"none"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameters: :effect_type, :songs_featured_on[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (45.8ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Canyon"], ["maker", "EHX"], ["effect_subtype", "delay"], ["notable_users", "me"], ["photo", "none"], ["user_id", 8], ["created_at", "2020-03-11 20:06:24.655382"], ["updated_at", "2020-03-11 20:06:24.655382"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 133ms (Views: 1.5ms | ActiveRecord: 62.4ms | Allocations: 16984)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:08:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:08:34 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2964)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 1001)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:08:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:08:50 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+  [1m[36mPedal Load (10.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 10.2ms | Allocations: 4413)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:09:42 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"rvvr", "maker"=>"vrvr", "effect_type"=>"", "effect_subtype"=>"vrrr", "notable_users"=>"vrrtbt", "songs_used_on"=>"cecece", "photo"=>"wxrvrb", "pedal"=>{"name"=>"rvvr", "maker"=>"vrvr", "effect_type"=>"", "effect_subtype"=>"vrrr", "notable_users"=>"vrrtbt", "songs_used_on"=>"cecece", "photo"=>"wxrvrb"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:12:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:12:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 857)
+
+
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 2956)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:12:41 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"g55ed", "maker"=>"kn knf", "effect_type"=>"", "effect_subtype"=>"nod3ih3d", "notable_users"=>"guufue", "songs_used_on"=>"rf44", "photo"=>"doenond", "pedal"=>{"name"=>"g55ed", "maker"=>"kn knf", "effect_type"=>"", "effect_subtype"=>"nod3ih3d", "notable_users"=>"guufue", "songs_used_on"=>"rf44", "photo"=>"doenond"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (7.9ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "g55ed"], ["maker", "kn knf"], ["effect_subtype", "nod3ih3d"], ["notable_users", "guufue"], ["songs_used_on", "rf44"], ["photo", "doenond"], ["user_id", 8], ["created_at", "2020-03-11 20:12:41.255281"], ["updated_at", "2020-03-11 20:12:41.255281"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 49ms (Views: 0.7ms | ActiveRecord: 38.5ms | Allocations: 3444)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:13:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:13:13 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 857)
+
+
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 3156)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:13:22 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.1ms | Allocations: 3156)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:13:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 857)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:13:59 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"ebvcejbvceu", "maker"=>"ekncken", "effect_type"=>"", "effect_subtype"=>"ckbne", "notable_users"=>"ke bcke", "songs_used_on"=>"eknce", "photo"=>"mklnk", "pedal"=>{"name"=>"ebvcejbvceu", "maker"=>"ekncken", "effect_type"=>"", "effect_subtype"=>"ckbne", "notable_users"=>"ke bcke", "songs_used_on"=>"eknce", "photo"=>"mklnk"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "ebvcejbvceu"], ["maker", "ekncken"], ["effect_subtype", "ckbne"], ["notable_users", "ke bcke"], ["songs_used_on", "eknce"], ["photo", "mklnk"], ["user_id", 8], ["created_at", "2020-03-11 20:13:59.558551"], ["updated_at", "2020-03-11 20:13:59.558551"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 3439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:14:04 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 3355)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:15:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:15:33 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (2.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 11.8ms | Allocations: 1313)
+
+
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 2.0ms | Allocations: 4053)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:15:42 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:15:42 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (9.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 9.7ms | Allocations: 3667)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 3.9ms | Allocations: 1091)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:16:24 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"pooo", "maker"=>"rvrgrg", "effect_type"=>"", "effect_subtype"=>"rcrr", "notable_users"=>"nlrnlcr", "songs_used_on"=>"nlrnclr", "photo"=>"nnenocnr", "pedal"=>{"name"=>"pooo", "maker"=>"rvrgrg", "effect_type"=>"", "effect_subtype"=>"rcrr", "notable_users"=>"nlrnlcr", "songs_used_on"=>"nlrnclr", "photo"=>"nnenocnr"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (0.6ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "pooo"], ["maker", "rvrgrg"], ["effect_subtype", "rcrr"], ["notable_users", "nlrnlcr"], ["songs_used_on", "nlrnclr"], ["photo", "nnenocnr"], ["user_id", 8], ["created_at", "2020-03-11 20:16:24.744555"], ["updated_at", "2020-03-11 20:16:24.744555"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 24ms (Views: 2.4ms | ActiveRecord: 3.0ms | Allocations: 3439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:16:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:16:45 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mUser Load (31.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 36ms (Views: 0.6ms | ActiveRecord: 31.7ms | Allocations: 1294)
+
+
+  [1m[36mPedal Load (6.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 6.0ms | Allocations: 4511)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:17:04 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"kllle", "maker"=>"ddeef", "effect_type"=>"", "effect_subtype"=>"eefe", "notable_users"=>"nnkn", "songs_used_on"=>"bide", "photo"=>"bdu", "pedal"=>{"name"=>"kllle", "maker"=>"ddeef", "effect_type"=>"", "effect_subtype"=>"eefe", "notable_users"=>"nnkn", "songs_used_on"=>"bide", "photo"=>"bdu"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "kllle"], ["maker", "ddeef"], ["effect_subtype", "eefe"], ["notable_users", "nnkn"], ["songs_used_on", "bide"], ["photo", "bdu"], ["user_id", 8], ["created_at", "2020-03-11 20:17:04.398970"], ["updated_at", "2020-03-11 20:17:04.398970"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 11ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 3439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:17:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:17:20 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (3.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 3.2ms | Allocations: 4237)
+
+
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 14.6ms | Allocations: 4754)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:17:22 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 3753)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:17:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 857)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:17:35 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"qbu", "maker"=>"nnini", "effect_type"=>"", "effect_subtype"=>"nikni", "notable_users"=>"bubu", "songs_used_on"=>"vyvyv", "photo"=>"nmknn", "pedal"=>{"name"=>"qbu", "maker"=>"nnini", "effect_type"=>"", "effect_subtype"=>"nikni", "notable_users"=>"bubu", "songs_used_on"=>"vyvyv", "photo"=>"nmknn"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (0.7ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "qbu"], ["maker", "nnini"], ["effect_subtype", "nikni"], ["notable_users", "bubu"], ["songs_used_on", "vyvyv"], ["photo", "nmknn"], ["user_id", 8], ["created_at", "2020-03-11 20:17:35.884733"], ["updated_at", "2020-03-11 20:17:35.884733"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 11ms (Views: 0.7ms | ActiveRecord: 2.3ms | Allocations: 3439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:17:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:17:46 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (142.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 151ms (Views: 7.6ms | ActiveRecord: 142.7ms | Allocations: 4118)
+
+
+  [1m[36mUser Load (251.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 254ms (Views: 0.5ms | ActiveRecord: 251.5ms | Allocations: 4953)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:17:57 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"q", "maker"=>"qq", "effect_type"=>"", "effect_subtype"=>"q", "notable_users"=>"qq", "songs_used_on"=>"qq", "photo"=>"qqq", "pedal"=>{"name"=>"q", "maker"=>"qq", "effect_type"=>"", "effect_subtype"=>"q", "notable_users"=>"qq", "songs_used_on"=>"qq", "photo"=>"qqq"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (1.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "q"], ["maker", "qq"], ["effect_subtype", "q"], ["notable_users", "qq"], ["songs_used_on", "qq"], ["photo", "qqq"], ["user_id", 8], ["created_at", "2020-03-11 20:17:57.644249"], ["updated_at", "2020-03-11 20:17:57.644249"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 27ms (Views: 1.0ms | ActiveRecord: 3.4ms | Allocations: 3441)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:18:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 16:18:21 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (3.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 3.4ms | Allocations: 4635)
+
+
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 10.1ms | Allocations: 5152)
+
+
+Started POST "/pedals/" for ::1 at 2020-03-11 16:18:32 -0400
+Processing by PedalsController#create as HTML
+  Parameters: {"name"=>"qqqqq", "maker"=>"qwwwqq", "effect_type"=>"", "effect_subtype"=>"qq", "notable_users"=>"qqqqq", "songs_used_on"=>"qqqqqq", "photo"=>"qqqq", "pedal"=>{"name"=>"qqqqq", "maker"=>"qwwwqq", "effect_type"=>"", "effect_subtype"=>"qq", "notable_users"=>"qqqqq", "songs_used_on"=>"qqqqqq", "photo"=>"qqqq"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+[31mUnpermitted parameter: :effect_type[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[36mPedal Create (0.6ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "maker", "effect_subtype", "notable_users", "songs_used_on", "photo", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "qqqqq"], ["maker", "qwwwqq"], ["effect_subtype", "qq"], ["notable_users", "qqqqq"], ["songs_used_on", "qqqqqq"], ["photo", "qqqq"], ["user_id", 8], ["created_at", "2020-03-11 20:18:32.669679"], ["updated_at", "2020-03-11 20:18:32.669679"]]
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:31:in `create'
+Completed 201 Created in 10ms (Views: 0.8ms | ActiveRecord: 1.7ms | Allocations: 3439)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 16:18:53 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 4353)
+
+

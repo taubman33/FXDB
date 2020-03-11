@@ -26,8 +26,8 @@ class PedalsController < ApplicationController
   
       # POST /pedals
       def create
-        @post = @current_user.pedals.build(pedal_params)
-    
+        @pedal = @current_user.pedals.build(pedal_params)
+          # @pedal = Pedal.new(pedal_params)
         if @pedal.save
           render json: @pedal, status: :created, location: @pedal
         else
@@ -57,6 +57,6 @@ class PedalsController < ApplicationController
     
         # Only allow a trusted parameter "white list" through.
         def pedal_params
-          params.require(:pedal).permit(:username, :email, :password)
+          params.require(:pedal).permit(:name, :maker, :effect_subtype, :notable_users, :songs_used_on, :photo)
         end
     end
