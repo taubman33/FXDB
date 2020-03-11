@@ -7421,3 +7421,200 @@ Processing by PedalsController#search as HTML
 Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 1170)
 
 
+Started GET "/pedals" for ::1 at 2020-03-11 15:38:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:38:26 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (4.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 4.4ms | Allocations: 2974)
+
+
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.5ms | ActiveRecord: 22.3ms | Allocations: 4339)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:38:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:38:40 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (14.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 21ms (Views: 6.2ms | ActiveRecord: 14.9ms | Allocations: 3490)
+
+
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 14.2ms | Allocations: 3752)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:39:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:39:17 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1519)
+
+
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 3876)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:39:34 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (0.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1170)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:39:35 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1170)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:41:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:41:27 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (1.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 3137)
+
+
+  [1m[36mUser Load (28.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 28.4ms | Allocations: 3967)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:41:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:41:45 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (6.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 6.6ms | Allocations: 3455)
+
+
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 3967)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:42:14 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (0.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1170)
+
+
+Started DELETE "/pedals/undefined" for ::1 at 2020-03-11 15:42:28 -0400
+Processing by PedalsController#destroy as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:55:in `set_pedal'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms | Allocations: 1280)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pedal with 'id'=undefined):
+  
+app/controllers/pedals_controller.rb:55:in `set_pedal'
+Started GET "/pedals" for ::1 at 2020-03-11 15:43:45 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (2.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.0ms | Allocations: 2990)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:43:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 857)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:43:52 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (1.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 1170)
+
+
+Started DELETE "/pedals/undefined" for ::1 at 2020-03-11 15:44:04 -0400
+Processing by PedalsController#destroy as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:55:in `set_pedal'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms | Allocations: 1280)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pedal with 'id'=undefined):
+  
+app/controllers/pedals_controller.rb:55:in `set_pedal'
+Started GET "/pedals" for ::1 at 2020-03-11 15:44:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 15:44:54 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (28.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (27.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 5.7ms | ActiveRecord: 28.3ms | Allocations: 3479)
+
+
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 27.5ms | Allocations: 3966)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:45:04 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (0.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1170)
+
+
+Started DELETE "/pedals/4" for ::1 at 2020-03-11 15:45:09 -0400
+Processing by PedalsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (2.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:55:in `set_pedal'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pedals_controller.rb:49:in `destroy'
+  [1m[36mPedal Destroy (4.3ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/pedals_controller.rb:49:in `destroy'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pedals_controller.rb:49:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 8.6ms | Allocations: 2963)
+
+
+Started GET "/search/Rat" for ::1 at 2020-03-11 15:45:25 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 963)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 15:45:28 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 2764)
+
+
