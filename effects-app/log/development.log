@@ -3932,3 +3932,320 @@ Processing by PedalsController#search as HTML
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1172)
 
 
+Started GET "/pedals" for ::1 at 2020-03-11 10:59:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 10:59:25 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 49ms (Views: 37.9ms | ActiveRecord: 7.0ms | Allocations: 12790)
+
+
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 74ms (Views: 0.2ms | ActiveRecord: 60.6ms | Allocations: 15577)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:07:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:07:05 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+  [1m[36mPedal Load (4.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 5.2ms | Allocations: 1486)
+
+
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 4.5ms | Allocations: 3907)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:08:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:08:16 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (2.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.7ms | Allocations: 3902)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 3882)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:08:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:08:29 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 3748)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3872)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:08:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:08:54 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (78.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 85ms (Views: 6.4ms | ActiveRecord: 78.1ms | Allocations: 3464)
+
+
+  [1m[36mUser Load (121.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 207ms (Views: 0.3ms | ActiveRecord: 197.4ms | Allocations: 3916)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:10:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:10:01 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (2.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.6ms | Allocations: 3445)
+
+
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 3866)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:13:13 -0400
+Started GET "/pedals" for ::1 at 2020-03-11 11:13:13 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (66.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 73ms (Views: 6.0ms | ActiveRecord: 66.2ms | Allocations: 3455)
+
+
+  [1m[36mUser Load (100.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 104ms (Views: 0.2ms | ActiveRecord: 100.8ms | Allocations: 3866)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:14:32 -0400
+Started GET "/pedals" for ::1 at 2020-03-11 11:14:32 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.6ms | ActiveRecord: 7.0ms | Allocations: 756)
+
+
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (4.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 4.3ms | Allocations: 2975)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:14:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:14:44 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (3.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 3.3ms | Allocations: 3448)
+
+
+  [1m[36mUser Load (63.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 73ms (Views: 0.3ms | ActiveRecord: 63.5ms | Allocations: 3815)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:14:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:14:50 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (2.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.5ms | Allocations: 3455)
+
+
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 0.2ms | ActiveRecord: 14.5ms | Allocations: 3845)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:14:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:14:52 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 3085)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 23ms (Views: 0.2ms | ActiveRecord: 20.5ms | Allocations: 814)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:14:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:14:58 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (29.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 35ms (Views: 5.0ms | ActiveRecord: 29.8ms | Allocations: 3455)
+
+
+  [1m[36mUser Load (48.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 51ms (Views: 0.3ms | ActiveRecord: 48.4ms | Allocations: 3866)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:15:03 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:15:03 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2971)
+
+
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.1ms | ActiveRecord: 8.3ms | Allocations: 3996)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:16:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:16:46 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 3006)
+
+
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 3990)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:16:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:16:55 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (5.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 5.2ms | Allocations: 3455)
+
+
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 3204)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:17:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:17:02 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (4.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 4.7ms | Allocations: 2971)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 26ms (Views: 0.2ms | ActiveRecord: 22.3ms | Allocations: 756)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:17:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:17:09 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPedal Load (5.2ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 5.2ms | Allocations: 4047)
+
+
+Completed 401 Unauthorized in 10ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 3651)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:17:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:17:16 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (4.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1611)
+
+
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 4.8ms | Allocations: 4074)
+
+
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:17:59 -0400
+Started GET "/pedals" for ::1 at 2020-03-11 11:17:59 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 1.0ms | Allocations: 3414)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 42ms (Views: 1.2ms | ActiveRecord: 3.3ms | Allocations: 4248)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:18:42 -0400
+Processing by PedalsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:18:42 -0400
+  [1m[36mPedal Load (3.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 3.1ms | Allocations: 3008)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.2ms | ActiveRecord: 8.4ms | Allocations: 756)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 11:21:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 11:21:25 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 2971)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (30.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 33ms (Views: 0.2ms | ActiveRecord: 30.9ms | Allocations: 756)
+
+
