@@ -3694,3 +3694,241 @@ Filter chain halted as :authorize_request rendered or redirected
 Completed 401 Unauthorized in 39ms (Views: 0.2ms | ActiveRecord: 37.7ms | Allocations: 3210)
 
 
+Started GET "/pedals" for ::1 at 2020-03-11 09:41:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:41:51 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (27.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mUser Load (26.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 200 OK in 35ms (Views: 6.8ms | ActiveRecord: 27.5ms | Allocations: 3895)
+
+
+Completed 401 Unauthorized in 34ms (Views: 0.2ms | ActiveRecord: 26.1ms | Allocations: 3651)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 09:44:41 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1176)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 09:44:43 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1171)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:44:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:44:58 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mPedal Load (36.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 401 Unauthorized in 39ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1424)
+
+
+Completed 200 OK in 46ms (Views: 8.6ms | ActiveRecord: 36.7ms | Allocations: 4116)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:46:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:46:31 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 756)
+
+
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (19.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 6.3ms | ActiveRecord: 19.5ms | Allocations: 2971)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 09:48:07 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1171)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 09:48:08 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1171)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:51:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:51:38 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 3173)
+
+
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3866)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 09:51:57 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (1.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 1175)
+
+
+Started GET "/search/Crybaby" for ::1 at 2020-03-11 09:52:10 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Crybaby"}
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Crybaby"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 963)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:52:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:52:21 -0400
+Processing by PedalsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPedal Load (15.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 0.5ms | ActiveRecord: 14.6ms | Allocations: 1550)
+
+
+Completed 200 OK in 25ms (Views: 8.9ms | ActiveRecord: 15.8ms | Allocations: 3973)
+
+
+Started GET "/" for ::1 at 2020-03-11 09:52:30 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"{\n    \"pedals\": "=>{"\n        {\n            \"name\": \"Turbo Rat\",\n            \"maker\": \"ProCo\",\n            \"effect_type\": \"dirt\",\n            \"effect_subtype\": \"Distortion\",\n            \"notable_users\": \"Jeff Beck\",\n            \"songs_used_on\": \"none\",\n            \"photo\": \"https://i.imgur.com/3g17Rrl.jpg\",\n            \"user_id\": 5,\n            \"song_id\": null,\n         \n        }\n    "=>{"\n}"=>nil}}}
+  Rendering /Users/jeremytaubman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jeremytaubman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.9ms | Allocations: 309)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 1653)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:52:39 -0400
+Processing by PedalsController#index as */*
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 2973)
+
+
+Started GET "/search/Crybaby" for ::1 at 2020-03-11 09:53:00 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Crybaby"}
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Crybaby"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 963)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:53:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:53:10 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2981)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 756)
+
+
+Started GET "/search/CryBaby" for ::1 at 2020-03-11 09:53:15 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"CryBaby"}
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "CryBaby"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1172)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:56:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:56:56 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.6ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 2979)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (38.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 41ms (Views: 0.2ms | ActiveRecord: 38.7ms | Allocations: 756)
+
+
+Started GET "/search/Fuzz%20Face" for ::1 at 2020-03-11 09:57:07 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Fuzz Face"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Fuzz Face"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1174)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 09:57:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 09:57:23 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (0.8ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 3299)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 974)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 10:00:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 10:00:29 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PedalsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 880)
+
+
+  [1m[36mPedal Load (2.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 2.7ms | Allocations: 3813)
+
+
+Started GET "/search/Fuzz%20Face" for ::1 at 2020-03-11 10:04:17 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Fuzz Face"}
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Fuzz Face"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1171)
+
+
+Started GET "/search/Big%20Muff" for ::1 at 2020-03-11 10:04:50 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Big Muff"}
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Big Muff"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1172)
+
+
