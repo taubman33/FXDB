@@ -8761,3 +8761,41 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 113ms (Views: 0.6ms | ActiveRecord: 108.3ms | Allocations: 960)
 
 
+Started GET "/search/Rat" for ::1 at 2020-03-11 21:40:38 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Rat"}
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Rat"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.3ms | Allocations: 1054)
+
+
+Started GET "/pedals" for ::1 at 2020-03-11 21:40:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-03-11 21:40:43 -0400
+Processing by PedalsController#index as HTML
+  [1m[36mPedal Load (1.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  ↳ app/controllers/pedals_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.4ms | Allocations: 4381)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 2.0ms | Allocations: 960)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 21:40:47 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (1.0ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 1177)
+
+
+Started GET "/search/Centaur" for ::1 at 2020-03-11 21:41:35 -0400
+Processing by PedalsController#search as HTML
+  Parameters: {"pedal_name"=>"Centaur"}
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" WHERE "pedals"."name" = $1[0m  [["name", "Centaur"]]
+  ↳ app/controllers/pedals_controller.rb:7:in `search'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1171)
+
+
