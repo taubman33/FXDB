@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(username: 'Git Tarestt', email: 'email23@email.com', password_digest: 'password', active: true)
-User.create!(username: 'Basega Tarestt', email: 'email21@email.com', password_digest: 'password', active: true)
-User.create!(username: 'Thad Rummerr', email: 'email22@email.com', password_digest: 'password', active: false)
+User.create!(username: 'Git Tarestt', email: 'email23@email.com', password: 'password', active: true)
+User.create!(username: 'Basega Tarestt', email: 'email21@email.com', password: 'password', active: true)
+User.create!(username: 'Thad Rummerr', email: 'email22@email.com', password: 'password', active: false)
 puts "#{User.count} users created!"
 
-@user = User.create!(username: 'Git Tarest', email: 'email@email.com', password_digest: 'password', active: true)
+@user = User.create!(username: 'Git Tarest', email: 'email@email.com', password: 'password', active: true)
 @pedal1 = @user.pedals.build(name:'Big Muff', maker:'Electro Harmonix', effect_type:'dirt', effect_subtype:'Fuzz', notable_users:'Dan Auerbach (The Black Keys), Jack White (The White Stripes), Matt Pike (Sleep), J Mascis (Dinosaur Jr)', songs_used_on: 'Pink Floyd - Comfortably Numb, The Black Keys - Thickfreakness, The White Stripes - Seven Nation Army, Dinosaur Jr - Feel The Pain', photo:'https://i.imgur.com/BTIbW6M.jpg')                                                                                                                                 
 @pedal1.save                                                                                                                              
 @pedal2 = @user.pedals.build(name:'Tube Screamer', maker:'Ibanez', effect_type:'dirt', effect_subtype:'Overdrive', notable_users:'Eric Johnson', songs_used_on:'Stevie Ray Vaughn - Pride and Joy, John Mayer - Your Body Is A Wonderland, Boris - Just Abandonded Myself', photo: 'https://i.imgur.com/2UfzxG2.jpg')
