@@ -7,9 +7,20 @@
 
 ## API Snippet
 
-```
-Paste a snippet received from a call to your API that shows the shape of the data
-```
+ {
+            "id": 9,
+            "name": "CryBaby",
+            "maker": "Dunlop",
+            "effect_type": "pitch",
+            "effect_subtype": "Wah",
+            "notable_users": "Jimi Hendrix, Slash (Guns N Roses), Kirk Hammett (Metallica)",
+            "songs_used_on": "Jimi Hendrix - Voodoo Chile, Guns N Roses - Paradise City",
+            "photo": "https://i.imgur.com/4cwbJSQ.jpg",
+            "user_id": 4,
+            "song_id": null,
+            "created_at": "2020-03-12T12:59:27.727Z",
+            "updated_at": "2020-03-12T12:59:27.727Z"
+        },
 
 ## Wireframes
 HomePage
@@ -110,36 +121,36 @@ User will be able to search for a specific effect pedal to see what gear the mus
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Creating Rails Backend | H | 6hrs| X | X |
-| Setting up data | H | 4hrs| X | X |
-| Setting up React components| H | 5hrs| X | X |
-| Components linked together | H | 6hrs| X | X |
-| Info rendering correctly | H | 6hrs| X | X |
-| Getting Auth Set Up | H |7hrs| X | X |
-| CRUD functionality | H | 6hrs| X | X |
-| Styling | H | 6hrs| X | X |
-| PMVP| H | 8hrs(full Thursday)| X | X |
+| Creating Rails Backend | H | 6hrs| 10hrs | 10hrs |
+| Setting up data | H | 4hrs| 5hrs | 5hrs |
+| Setting up React components| H | 5hrs| 6hrs | 6hrs |
+| Components linked together | H | 6hrs| 4hrs | 4hrs |
+| Info rendering correctly | H | 6hrs| 6hrs | 6hrs |
+| Getting Auth Set Up | H |7hrs| 7hrs | 7hrs |
+| CRUD functionality | H | 6hrs| 14hrs | 14hrs |
+| Styling | H | 6hrs| 7hrs | 7hrs |
+| PMVP| H | 8hrs(full Thursday)| 1hr | 1hr |
 
-| Total | H | 55hrs| X | X |
+| Total | H | 55hrs| X | 65hrs |
 
 ## Project Schedule
 
 
-Thurs 3/5 - present prompt, have all prep work completed
+Thurs 3/5 - present prompt, have all prep work completed - Complete
 
-Fri 3/6 - using completed ERD, Comp Heirarchy, create components and have all data information ready
+Fri 3/6 - using completed ERD, Comp Heirarchy, create components and have all data information ready - Complete
 
-Sat 3/7 - start back end,
+Sat 3/7 - start back end - Complete
 
-Sun 3/8 - get components started up -> imports, exports, links + redirects
+Sun 3/8 - get components started up -> imports, exports, links + redirects - Complete
 
-Mon - 3/9 - Complete back end 
+Mon - 3/9 - Complete back end - Not complete - CRUD not going yet
 
-Tues - 3/10 Front end linked up, MVP reached. Night time -> focus on Outcomes for Weds meeting
+Tues - 3/10 Front end linked up, MVP reached. Night time -> focus on Outcomes for Weds meeting - Complete
 
-Weds - 3/11 styling
+Weds - 3/11 styling - Complete
 
-Thurs - 3/12 attempting post MVP -> 2nd search function
+Thurs - 3/12 attempting post MVP -> 2nd search function - Not complete, working on Front End Crud instead
 
 Fri  3/13 - present
 
@@ -156,7 +167,7 @@ Fri  3/13 - present
 
 The main issue I am anticipating is the sheer volume of data that I'll need to put in for this to be a "completed" project. I anticipate putting in ~10-15 pedals and songs, but if I actually want to deploy this and sent it into the community for use, it will need substantially more (30-40 pedals and >50 songs).
 
-I want to have Users able to create pedals, but only Admins able to delete them (Update, not sure of yet) and so will need to learn how to set that up as well.
+Biggest issues were in Updating on the Front End, and connecting the Front and Back Ends for C, U, and D functions
 
 ## Code Snippet
 
@@ -169,4 +180,4 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made in your overall planning and the reasoning behind those changes.  
+ Unable to do PMVP goal of searching for artists or songs
