@@ -7,20 +7,7 @@
 
 ## API Snippet
 
- {
-            "id": 9,
-            "name": "CryBaby",
-            "maker": "Dunlop",
-            "effect_type": "pitch",
-            "effect_subtype": "Wah",
-            "notable_users": "Jimi Hendrix, Slash (Guns N Roses), Kirk Hammett (Metallica)",
-            "songs_used_on": "Jimi Hendrix - Voodoo Chile, Guns N Roses - Paradise City",
-            "photo": "https://i.imgur.com/4cwbJSQ.jpg",
-            "user_id": 4,
-            "song_id": null,
-            "created_at": "2020-03-12T12:59:27.727Z",
-            "updated_at": "2020-03-12T12:59:27.727Z"
-        },
+![ApiCall](https://i.imgur.com/JhzdfGu.png)
 
 ## Wireframes
 HomePage
